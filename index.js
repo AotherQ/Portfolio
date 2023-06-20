@@ -22,6 +22,7 @@ async function getTopTracks() {
 async function showTopTracks() {
     const topTracks = await getTopTracks();
     const topTracksList = document.getElementById('top-tracks');
+    topTracksList.innerHTML = ''; // Şarkı listesini temizle
 
     topTracks.forEach(track => {
         const li = document.createElement('li');
@@ -37,6 +38,6 @@ async function showTopTracks() {
     });
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     showTopTracks();
 });
