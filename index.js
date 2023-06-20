@@ -1,4 +1,4 @@
-const token = 'BQABv8AMyQMWGXhIXGfmXMP6BVK2vvdSBEQ3Mq5TboIMcQSEd9hgA4d2itkhn1z4z6S89zFYdO3IjX0BpTiV2TOsIu1-9hMnYqfcehIWRCNt1BndJkPrPc35ivovvBWJd0Ec13kg5CWOZWMmiB0Ez4GThmsf_WcfpaVdqFl83YUPGC_OeaLpJUNOhsfEfkeYCojMz3563A4JjrneewAroHPxgy540ZWAL0HwsUjMI1dsNXbUJ5eIJFWYZMg16ImwNcO9iSgXHdm-xu8PCdwbvMYI';
+const token = 'cd6b2d7ecd214129bf548e7cf4fa1c23';
 
 async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
