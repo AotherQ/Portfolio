@@ -93,40 +93,76 @@ header {
         height: 20vh;
         margin-left: 10%;
     }
-    #top-tracks-container{
+    #top-projects-container {
         margin-left: 10%;
         margin-bottom: 10%;
-    }
-    
-    #top-tracks{
+      }
+      
+      #top-projects {
         list-style-type: none;
-        border-style:solid;
+        border-style: solid;
         border-color: #64625d;
         background-color: rgb(63, 62, 62);
         font-size: 20px;
         height: 60vh;
         width: 30vw;
-    }
-
-    #top-tracks li {
-        display: flex;
-        align-items: center;
-        margin-right: 7.5%;
-        margin-top: 4.5%;
+        padding: 10px;
+        overflow: auto;
+      }
+      
+      #top-projects li {
+        margin-left: 2%;
+        margin-top: 5%;
         border-style: solid;
         border-color: #64625d;
+        background-color:rgb(104, 104, 104);
+      }
+
+      #top-projects li a{
+        color: #fff;
+      }
+      
+      .project {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      
+      .project-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .project-details {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+      }
+      
+      .star-icon {
+        margin-right: 5px;
+        color: #FFD700;
+      }
+      
+      .fork-icon {
+        margin-right: 5px;
+        color: #A9A9A9;
+      }
+      
+      .languages {
+        margin-top: 5px;
+      }
+      
+      .language {
+        display: inline-block;
         background-color: #64625d;
+        color: #fff;
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin-right: 5px;
       }
-      
-      #top-tracks li img {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
-      }
-      
-      #top-tracks li span {
-        font-size: 16px;
-      }      
+    
 
     #about-p{
         border-style:solid;
@@ -219,7 +255,7 @@ header {
     .search-item a {
         text-decoration: none;
         color: rgb(63, 62, 62);
-        font-size: 13px;
+        font-size: 11px;
     }
     .search-item a:hover {
         color: #AAA492;
@@ -257,40 +293,73 @@ header {
         height: 20vh;
         margin-left: 10%;
     }
-    #top-tracks-container{
-        margin-left: 20%;
-        margin-bottom: 10%;
-    }
-    
-    #top-tracks{
+
+    #top-projects {
         list-style-type: none;
-        border-style:solid;
+        border-style: solid;
         border-color: #64625d;
         background-color: rgb(63, 62, 62);
         font-size: 20px;
-        height: 52vh;
-        width: 50vw;
-    }
-
-    #top-tracks li {
-        display: flex;
-        align-items: center;
-        margin-right: 10%;
-        margin-top: 4.5%;
+        height: 50vh;
+        width: 55vw;
+        padding: 10px;
+        overflow: auto;
+        margin-left: 20%;
+        margin-bottom: 5%;
+      }
+      
+      #top-projects li {
+        margin-left: 2%;
+        margin-top: 5%;
         border-style: solid;
         border-color: #64625d;
+        background-color:rgb(104, 104, 104);
+      }
+
+      #top-projects li a{
+        color: #fff;
+      }
+      
+      .project {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      
+      .project-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .project-details {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+      }
+      
+      .star-icon {
+        margin-right: 5px;
+        color: #FFD700;
+      }
+      
+      .fork-icon {
+        margin-right: 5px;
+        color: #A9A9A9;
+      }
+      
+      .languages {
+        margin-top: 5px;
+      }
+      
+      .language {
+        display: inline-block;
         background-color: #64625d;
+        color: #fff;
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin-right: 5px;
       }
-      
-      #top-tracks li img {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
-      }
-      
-      #top-tracks li span {
-        font-size: 16px;
-      }      
 
     #about-p{
         border-style:solid;
@@ -419,40 +488,74 @@ header {
         height: 20vh;
         margin-left: 10%;
     }
-    #top-tracks-container{
-        margin-left: 20%;
-        margin-bottom: 10%;
-    }
-    
-    #top-tracks{
+
+    #top-projects {
         list-style-type: none;
-        border-style:solid;
+        border-style: solid;
         border-color: #64625d;
         background-color: rgb(63, 62, 62);
         font-size: 20px;
-        height: 100vh;
-        width: 50vw;
-    }
-
-    #top-tracks li {
-        display: flex;
-        align-items: center;
-        margin-right: 10%;
-        margin-top: 4.5%;
+        height: 50vh;
+        width: 54vw;
+        padding: 10px;
+        overflow: auto;
+        margin-left: 20%;
+        margin-bottom: 5%;
+      }
+      
+      #top-projects li {
+        margin-left: 2%;
+        margin-top: 5%;
         border-style: solid;
         border-color: #64625d;
+        background-color:rgb(104, 104, 104);
+      }
+
+      #top-projects li a{
+        color: #fff;
+      }
+      
+      .project {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      
+      .project-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .project-details {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+      }
+      
+      .star-icon {
+        margin-right: 5px;
+        color: #FFD700;
+      }
+      
+      .fork-icon {
+        margin-right: 5px;
+        color: #A9A9A9;
+      }
+      
+      .languages {
+        margin-top: 5px;
+      }
+      
+      .language {
+        display: inline-block;
         background-color: #64625d;
+        color: #fff;
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin-right: 5px;
       }
       
-      #top-tracks li img {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
-      }
-      
-      #top-tracks li span {
-        font-size: 16px;
-      }      
 
     #about-p{
         border-style:solid;

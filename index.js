@@ -1,126 +1,56 @@
-const clientId = 'e8cd444d81ec445fb3c8ebaadc28bceb';
-const clientSecret = '9f1f933e0fcd45769844dc704ca251ef';
-const redirectUri = 'https://aotherq.netlify.app/';
+const username = 'AotherQ';
 
-const authorizeUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&scope=user-top-read`;
-
-async function getAccessToken(code) {
-  const res = await fetch('https://accounts.spotify.com/api/token', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      Authorization: `Basic ${btoa(`${clientId}:${clientSecret}`)}`,
-    },
-    body: new URLSearchParams({
-      grant_type: 'authorization_code',
-      code: code,
-      redirect_uri: redirectUri,
-    }),
-  });
-  const data = await res.json();
-  return data.access_token;
+async function getTopProjects() {
+  const response = await fetch(`https://api.github.com/users/${username}/repos?sort=stars&per_page=5`);
+  const data = await response.json();
+  return data;
 }
 
-async function refreshToken(refreshToken) {
-  const res = await fetch('https://accounts.spotify.com/api/token', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      Authorization: `Basic ${btoa(`${clientId}:${clientSecret}`)}`,
-    },
-    body: new URLSearchParams({
-      grant_type: 'refresh_token',
-      refresh_token: refreshToken,
-    }),
-  });
-  const data = await res.json();
-  return data.access_token;
-}
+async function showTopProjects() {
+  const topProjects = await getTopProjects();
+  const topProjectsList = document.getElementById('top-projects');
 
-async function getAuthorizationCode() {
-  return new Promise((resolve, reject) => {
-    const authWindow = window.open(authorizeUrl, '_blank', 'width=400,height=600');
-
-    const handleAuthorizationResponse = (event) => {
-      if (event.origin === window.location.origin) {
-        const code = event.data;
-        if (code) {
-          resolve(code);
-        } else {
-          reject('Authorization code not received.');
-        }
-        window.removeEventListener('message', handleAuthorizationResponse);
-        authWindow.close();
-      }
-    };
-
-    window.addEventListener('message', handleAuthorizationResponse);
-  });
-}
-
-async function getToken() {
-  let accessToken = localStorage.getItem('accessToken');
-  let refreshToken = localStorage.getItem('refreshToken');
-
-  if (!accessToken) {
-    const code = await getAuthorizationCode();
-    accessToken = await getAccessToken(code);
-    localStorage.setItem('accessToken', accessToken);
-  }
-
-  if (refreshToken) {
-    const tokenExpiration = Number(localStorage.getItem('tokenExpiration'));
-    const currentTime = Date.now() / 1000;
-    if (currentTime >= tokenExpiration) {
-      accessToken = await refreshToken(refreshToken);
-      localStorage.setItem('accessToken', accessToken);
-    }
-  }
-
-  return accessToken;
-}
-
-async function fetchWebApi(endpoint, method, body, accessToken) {
-  if (!accessToken) {
-    accessToken = await getToken();
-  }
-
-  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-    },
-    method,
-    body: JSON.stringify(body),
-  });
-  return await res.json();
-}
-
-async function getTopTracks() {
-  return (await fetchWebApi(
-    'v1/me/top/tracks?time_range=short_term&limit=5',
-    'GET'
-  )).items;
-}
-
-async function showTopTracks() {
-  const topTracks = await getTopTracks();
-  const topTracksList = document.getElementById('top-tracks');
-  topTracksList.innerHTML = '';
-
-  topTracks.forEach(track => {
+  topProjects.forEach(async (project) => {
     const li = document.createElement('li');
-    const img = document.createElement('img');
-    const span = document.createElement('span');
+    const a = document.createElement('a');
+    a.href = project.html_url;
+    a.textContent = project.name;
 
-    img.src = track.album.images[0].url;
-    span.textContent = `${track.name} by ${track.artists.map(artist => artist.name).join(', ')}`;
+    const details = document.createElement('div');
+    details.classList.add('project-details');
 
-    li.appendChild(img);
-    li.appendChild(span);
-    topTracksList.appendChild(li);
+    const starIcon = document.createElement('span');
+    starIcon.classList.add('star-icon');
+    starIcon.textContent = '★ ' + project.stargazers_count;
+
+    const forkIcon = document.createElement('span');
+    forkIcon.classList.add('fork-icon');
+    forkIcon.textContent = 'Fork: ' + project.forks_count;
+
+    const languages = document.createElement('div');
+    languages.classList.add('languages');
+    
+    const languagesResponse = await fetch(project.languages_url);
+    const languagesData = await languagesResponse.json();
+    const languageKeys = Object.keys(languagesData);
+    
+    languageKeys.forEach((languageKey) => {
+      const language = document.createElement('span');
+      language.classList.add('language');
+      language.textContent = languageKey;
+      languages.appendChild(language);
+    });
+
+    details.appendChild(starIcon);
+    details.appendChild(forkIcon);
+    details.appendChild(languages);
+
+    li.appendChild(a);
+    li.appendChild(details);
+    topProjectsList.appendChild(li);
   });
 }
 
 window.addEventListener('load', () => {
-  showTopTracks();
+  showTopProjects();
 });
