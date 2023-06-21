@@ -7,7 +7,7 @@ header {
     height: 13vh;
 }
 
-@media screen and (min-width:680px ){
+@media screen and (min-width:920px ){
 
     .title{
         display: flex;
@@ -404,7 +404,7 @@ header {
 
     
 }
-@media screen and (min-width:601px ) and (max-width:679px) {
+@media screen and (min-width:601px ) and (max-width:919px) {
     .title{
         display: flex;
     }
