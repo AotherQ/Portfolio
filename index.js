@@ -1,24 +1,93 @@
 const clientId = 'e8cd444d81ec445fb3c8ebaadc28bceb';
 const clientSecret = '9f1f933e0fcd45769844dc704ca251ef';
+const redirectUri = 'https://aotherq.netlify.app/';
 
-async function getToken() {
+const authorizeUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&scope=user-top-read`;
+
+async function getAccessToken(code) {
   const res = await fetch('https://accounts.spotify.com/api/token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
       Authorization: `Basic ${btoa(`${clientId}:${clientSecret}`)}`,
     },
-    body: 'grant_type=client_credentials',
+    body: new URLSearchParams({
+      grant_type: 'authorization_code',
+      code: code,
+      redirect_uri: redirectUri,
+    }),
   });
   const data = await res.json();
   return data.access_token;
 }
 
-async function fetchWebApi(endpoint, method, body) {
-  const token = await getToken();
+async function refreshToken(refreshToken) {
+  const res = await fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      Authorization: `Basic ${btoa(`${clientId}:${clientSecret}`)}`,
+    },
+    body: new URLSearchParams({
+      grant_type: 'refresh_token',
+      refresh_token: refreshToken,
+    }),
+  });
+  const data = await res.json();
+  return data.access_token;
+}
+
+async function getAuthorizationCode() {
+  return new Promise((resolve, reject) => {
+    const authWindow = window.open(authorizeUrl, '_blank', 'width=400,height=600');
+
+    const handleAuthorizationResponse = (event) => {
+      if (event.origin === window.location.origin) {
+        const code = event.data;
+        if (code) {
+          resolve(code);
+        } else {
+          reject('Authorization code not received.');
+        }
+        window.removeEventListener('message', handleAuthorizationResponse);
+        authWindow.close();
+      }
+    };
+
+    window.addEventListener('message', handleAuthorizationResponse);
+  });
+}
+
+async function getToken() {
+  let accessToken = localStorage.getItem('accessToken');
+  let refreshToken = localStorage.getItem('refreshToken');
+
+  if (!accessToken) {
+    const code = await getAuthorizationCode();
+    accessToken = await getAccessToken(code);
+    localStorage.setItem('accessToken', accessToken);
+  }
+
+  if (refreshToken) {
+    const tokenExpiration = Number(localStorage.getItem('tokenExpiration'));
+    const currentTime = Date.now() / 1000;
+    if (currentTime >= tokenExpiration) {
+      accessToken = await refreshToken(refreshToken);
+      localStorage.setItem('accessToken', accessToken);
+    }
+  }
+
+  return accessToken;
+}
+
+async function fetchWebApi(endpoint, method, body, accessToken) {
+  if (!accessToken) {
+    accessToken = await getToken();
+  }
+
   const res = await fetch(`https://api.spotify.com/${endpoint}`, {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${accessToken}`,
     },
     method,
     body: JSON.stringify(body),
