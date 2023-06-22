@@ -79,7 +79,7 @@ header {
         border-color: #64625d;
         background-color: rgb(63, 62, 62);
         margin-left: 10%;
-        margin-top: 3%
+        
     }
     
     .name{
@@ -95,7 +95,7 @@ header {
     }
     #top-projects-container {
         margin-left: 10%;
-        margin-bottom: 10%;
+        margin-bottom: 9.7%;
       }
       
       #top-projects {
@@ -178,6 +178,12 @@ header {
         margin: 7%;
     }
     
+    #p-div{
+        border-style: solid;
+        border-color: #64625d;
+        background-color:rgb(104, 104, 104);
+        margin: 2%;
+    }
     
     .flex-container{
         width: 10vw;
@@ -209,7 +215,7 @@ header {
 
 
 
-@media screen and (min-width:370px ) and (max-width:600px) {
+@media (max-width:600px) {
     .title{
         display: flex;
     }
@@ -373,6 +379,13 @@ header {
 
     #p{
         margin: 7%;
+    }
+
+    #p-div{
+        border-style: solid;
+        border-color: #64625d;
+        background-color:rgb(104, 104, 104);
+        margin: 2%;
     }
     
     
@@ -571,7 +584,13 @@ header {
         margin: 7%;
     }
     
-    
+    #p-div{
+        border-style: solid;
+        border-color: #64625d;
+        background-color:rgb(104, 104, 104);
+        margin: 2%;
+    }
+
     .flex-container{
         width: 10vw;
     }
