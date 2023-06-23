@@ -54,3 +54,4 @@ async function showTopProjects() {
 window.addEventListener('load', () => {
   showTopProjects();
 });
+
