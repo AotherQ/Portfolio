@@ -48,7 +48,6 @@ header {
         text-align: center;
         font-size: 200%;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: #64625d;
         flex-grow: 1;
         letter-spacing: 5px;
     }
@@ -73,7 +72,7 @@ header {
     }
     .search-item a {
         text-decoration: none;
-        color: rgb(63, 62, 62);
+        color: black;
         font-size: 18px;
     }
     .search-item a:hover {
@@ -265,7 +264,6 @@ header {
         text-align: center;
         font-size: 100%;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: #64625d;
         flex-grow: 1;
         letter-spacing: 5px;
     }
@@ -290,7 +288,7 @@ header {
     }
     .search-item a {
         text-decoration: none;
-        color: rgb(63, 62, 62);
+        color: black;
         font-size: 11px;
     }
     .search-item a:hover {
@@ -476,7 +474,6 @@ header {
         text-align: center;
         font-size: 100%;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: #64625d;
         flex-grow: 1;
         letter-spacing: 5px;
     }
@@ -501,7 +498,7 @@ header {
     }
     .search-item a {
         text-decoration: none;
-        color: rgb(63, 62, 62);
+        color: black;
         font-size: 13px;
     }
     .search-item a:hover {
