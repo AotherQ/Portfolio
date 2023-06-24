@@ -531,7 +531,7 @@ header {
         border-color: #bbbab8;
         box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
         /*background-color: rgb(63, 62, 62);*/
-        margin-left: 10%;
+        margin-left: 7%;
         margin-top: 3%
     }
     
@@ -559,7 +559,7 @@ header {
         width: 54vw;
         padding: 10px;
         overflow: auto;
-        margin-left: 20%;
+        margin-left: 22%;
         margin-bottom: 5%;
       }
       
@@ -625,7 +625,7 @@ header {
         border-style:solid;
         border-color: rgb(63, 62, 62);
         width: 57vw;
-        margin-left: 20%;
+        margin-left: 22%;
         font-size: 20px;
         background-color: rgb(63, 62, 62);
         box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
@@ -653,7 +653,7 @@ header {
     #u{
         display: flex;
         align-items: center;
-        margin-left: 33%;
+        margin-left: 35%;
         margin-top: 8%;
     }
     .h{
