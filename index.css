@@ -98,7 +98,7 @@ header {
         border-style:solid;
         border-color: #bbbab8;
         /* background-color: rgb(63, 62, 62); */
-        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
         margin-left: 10%;
         
     }
@@ -125,7 +125,7 @@ header {
         border-radius: 2rem;
         border-style: solid;
         border-color: rgb(63, 62, 62);
-        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
         background-color: rgb(63, 62, 62);
         font-size: 20px;
         height: 60vh;
@@ -195,7 +195,7 @@ header {
         border-radius: 2rem;
         border-style:solid;
         border-color: rgb(63, 62, 62);
-        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
         width: 30vw;
         margin-left: 32%;
         font-size: 20px;
@@ -315,7 +315,7 @@ header {
         border-radius: 2rem;
         border-style:solid;
         border-color: #bbbab8;
-        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
         /*background-color: rgb(63, 62, 62);*/
         margin-left: 10%;
         margin-top: 3%
@@ -338,7 +338,7 @@ header {
         border-radius: 2rem;
         border-style: solid;
         border-color: rgb(63, 62, 62);
-        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
         background-color: rgb(63, 62, 62);
         font-size: 20px;
         height: 50vh;
@@ -409,7 +409,7 @@ header {
         border-radius: 2rem;
         border-style:solid;
         border-color: rgb(63, 62, 62);
-        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
         width: 60vw;
         margin-left: 20%;
         font-size: 20px;
@@ -529,7 +529,7 @@ header {
         border-radius: 2rem;
         border-style:solid;
         border-color: #bbbab8;
-        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
         /*background-color: rgb(63, 62, 62);*/
         margin-left: 10%;
         margin-top: 3%
@@ -551,10 +551,11 @@ header {
         border-radius: 2rem;
         list-style-type: none;
         border-style: solid;
-        border-color: #64625d;
+        border-color: rgb(63, 62, 62);
         background-color: rgb(63, 62, 62);
+        box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
         font-size: 20px;
-        height: 50vh;
+        height: 60vh;
         width: 54vw;
         padding: 10px;
         overflow: auto;
@@ -622,11 +623,12 @@ header {
     #about-p{
         border-radius: 2rem;
         border-style:solid;
-        border-color: #64625d;
+        border-color: rgb(63, 62, 62);
         width: 57vw;
         margin-left: 20%;
         font-size: 20px;
         background-color: rgb(63, 62, 62);
+        box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
         margin-bottom: 5%;
     }
 
