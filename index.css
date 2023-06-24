@@ -94,7 +94,7 @@ header {
         align-items: center;
         font-family:  'Arial Narrow', Arial, sans-serif;
         list-style-type: none;
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style:solid;
         border-color: #bbbab8;
         /* background-color: rgb(63, 62, 62); */
@@ -122,7 +122,7 @@ header {
       
       #top-projects {
         list-style-type: none;
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style: solid;
         border-color: rgb(63, 62, 62);
         box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
@@ -192,7 +192,7 @@ header {
     
 
     #about-p{
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style:solid;
         border-color: rgb(63, 62, 62);
         box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
@@ -210,7 +210,7 @@ header {
     }
     
     #p-div{
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style: solid;
         border-color: #64625d;
         background-color:rgb(104, 104, 104);
@@ -316,7 +316,7 @@ header {
         align-items: center;
         font-family:  'Arial Narrow', Arial, sans-serif;
         list-style-type: none;
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style:solid;
         border-color: #bbbab8;
         box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
@@ -339,7 +339,7 @@ header {
 
     #top-projects {
         list-style-type: none;
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style: solid;
         border-color: rgb(63, 62, 62);
         box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
@@ -410,7 +410,7 @@ header {
       }
 
     #about-p{
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style:solid;
         border-color: rgb(63, 62, 62);
         box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
@@ -429,7 +429,7 @@ header {
     }
 
     #p-div{
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style: solid;
         border-color: #64625d;
         background-color:rgb(104, 104, 104);
@@ -530,7 +530,7 @@ header {
         align-items: center;
         font-family:  'Arial Narrow', Arial, sans-serif;
         list-style-type: none;
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style:solid;
         border-color: #bbbab8;
         box-shadow: rgba(0, 0, 0, 0.24) 20px 25px 10px;
@@ -552,7 +552,7 @@ header {
     }
 
     #top-projects {
-        border-radius: 2rem;
+        border-radius: 1rem;
         list-style-type: none;
         border-style: solid;
         border-color: rgb(63, 62, 62);
@@ -625,7 +625,7 @@ header {
       
 
     #about-p{
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style:solid;
         border-color: rgb(63, 62, 62);
         width: 57vw;
@@ -643,7 +643,7 @@ header {
     }
     
     #p-div{
-        border-radius: 2rem;
+        border-radius: 1rem;
         border-style: solid;
         border-color: #64625d;
         background-color:rgb(104, 104, 104);
