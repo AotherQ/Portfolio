@@ -232,6 +232,10 @@ header {
         transition: 0.5s;
         color: rgb(63, 62, 62);
     }
+
+    .h:hover{
+        color: rgb(14, 13, 13);
+    }
     
     .l{
         list-style-type: none;
