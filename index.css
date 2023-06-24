@@ -96,8 +96,9 @@ header {
         list-style-type: none;
         border-radius: 2rem;
         border-style:solid;
-        border-color: #64625d;
+        border-color: #bbbab8;
         /* background-color: rgb(63, 62, 62); */
+        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
         margin-left: 10%;
         
     }
@@ -123,7 +124,8 @@ header {
         list-style-type: none;
         border-radius: 2rem;
         border-style: solid;
-        border-color: #64625d;
+        border-color: rgb(63, 62, 62);
+        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
         background-color: rgb(63, 62, 62);
         font-size: 20px;
         height: 60vh;
@@ -192,7 +194,8 @@ header {
     #about-p{
         border-radius: 2rem;
         border-style:solid;
-        border-color: #64625d;
+        border-color: rgb(63, 62, 62);
+        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
         width: 30vw;
         margin-left: 32%;
         font-size: 20px;
@@ -221,8 +224,8 @@ header {
     #u{
         display: flex;
         align-items: center;
-        margin-left: 17%;
-        margin-bottom: 10%;
+        margin-left: 30%;
+        margin-top: 6%;
     }
     .h{
         font-size: 300%;
@@ -311,7 +314,8 @@ header {
         list-style-type: none;
         border-radius: 2rem;
         border-style:solid;
-        border-color: #64625d;
+        border-color: #bbbab8;
+        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
         /*background-color: rgb(63, 62, 62);*/
         margin-left: 10%;
         margin-top: 3%
@@ -333,7 +337,8 @@ header {
         list-style-type: none;
         border-radius: 2rem;
         border-style: solid;
-        border-color: #64625d;
+        border-color: rgb(63, 62, 62);
+        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
         background-color: rgb(63, 62, 62);
         font-size: 20px;
         height: 50vh;
@@ -403,12 +408,14 @@ header {
     #about-p{
         border-radius: 2rem;
         border-style:solid;
-        border-color: #64625d;
+        border-color: rgb(63, 62, 62);
+        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
         width: 60vw;
         margin-left: 20%;
         font-size: 20px;
         background-color: rgb(63, 62, 62);
-        margin-bottom: 5%;
+        margin-top: 15%;
+        margin-bottom: 15%;
     }
 
     #p{
@@ -433,8 +440,8 @@ header {
     #u{
         display: flex;
         align-items: center;
-        margin-left: 18%;
-        margin-bottom: 10%;
+        margin-left: 20%;
+        margin-top: 12%;
     }
     .h{
         font-size: 300%;
@@ -521,7 +528,8 @@ header {
         list-style-type: none;
         border-radius: 2rem;
         border-style:solid;
-        border-color: #64625d;
+        border-color: #bbbab8;
+        box-shadow: rgba(0, 0, 0, 0.24) 30px 45px 10px;
         /*background-color: rgb(63, 62, 62);*/
         margin-left: 10%;
         margin-top: 3%
@@ -644,7 +652,7 @@ header {
         display: flex;
         align-items: center;
         margin-left: 33%;
-        margin-bottom: 10%;
+        margin-top: 8%;
     }
     .h{
         font-size: 300%;
