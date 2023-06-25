@@ -74,9 +74,10 @@ header {
         text-decoration: none;
         color: black;
         font-size: 18px;
+        transition: 0.5s;
     }
     .search-item a:hover {
-        color: #AAA492;
+        color: #666565;
     }
     #about{
         display: flex;
@@ -141,10 +142,18 @@ header {
         border-style: solid;
         border-color: #64625d;
         background-color:rgb(104, 104, 104);
+        transition: 0.9s;
+      }
+
+      #top-projects li:hover{
+        width: 80%;
+        border-style: dashed solid;
+        border-color: #2b2a2a;
       }
 
       #top-projects li a{
-        margin-left: 3%;
+        text-decoration: none;
+        margin-left: 5%;
         color: #fff;
       }
       
@@ -167,7 +176,7 @@ header {
       }
       
       .star-icon {
-        margin-left: 3%;
+        margin-left: 5%;
         margin-right: 5px;
         color: #FFD700;
       }
@@ -363,7 +372,8 @@ header {
       }
 
       #top-projects li a{
-        margin-left: 6%;
+        text-decoration: none;
+        margin-left: 8%;
         color: #fff;
       }
       
@@ -386,7 +396,7 @@ header {
       }
       
       .star-icon {
-        margin-left: 5%;
+        margin-left: 8%;
         margin-right: 5px;
         color: #FFD700;
       }
@@ -577,7 +587,8 @@ header {
       }
 
       #top-projects li a{
-        margin-left: 3%;
+        text-decoration: none;
+        margin-left: 5%;
         color: #fff;
       }
       
@@ -600,7 +611,7 @@ header {
       }
       
       .star-icon {
-        margin-left: 3%;
+        margin-left: 5%;
         margin-right: 5px;
         color: #FFD700;
       }
