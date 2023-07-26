@@ -1,0 +1,63 @@
+
+
+
+
+.switch{
+    background-color: rgb(83, 83, 83);  /* main background */
+
+    position: absolute;
+
+    right: 20px;
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+
+    border: 1px solid white;
+    border-radius: 2rem;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 2rem;
+    
+
+    background-color: transparent;
+
+}
+
+.check{
+    visibility: hidden;
+}
+
+.slider::before{
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 30px;
+    background-color: rgb(117, 134, 134); /*switc color*/
+    color: white;  /* icon color */
+    text-align: center;
+    line-height: 35px;
+    border-radius: 2rem;
+
+    transition: 0.5s;
+}
+
+
+.check:checked + .slider::before{
+    transform: translateX(35px);
+    background-color: white;
+    color: black;
+    
+
+}
+
+input:not(checked) + .slider::before{
+
+    background-color: rgb(8, 8, 82);
+}
