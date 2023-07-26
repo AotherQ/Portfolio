@@ -241,7 +241,7 @@ body::-webkit-scrollbar-thumb {
 @media (max-width:600px) {
 
     .main_box{
-        padding-top: 80%;
+        padding-top: 140%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -254,13 +254,13 @@ body::-webkit-scrollbar-thumb {
 
     .switch{
         position: absolute;
-        top: 80px;
+        top: 55px;
     }
 
     .header{
         position: relative;
-        top: -32%;
-        left: -30%;
+        top: -40%;
+        left: -17%;
 
         font-size: 150%;
         letter-spacing: 5px;
@@ -271,7 +271,7 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         justify-content:space-evenly;
         align-items: center;
-        height: 60%;
+        height: 80%;
         width: 100%;
 
         gap: 10%;
@@ -286,7 +286,7 @@ body::-webkit-scrollbar-thumb {
 
     .b{
         border: solid 5px var(--textcolor);
-        width: 75%;
+        width: 90%;
         height: 10%;
         border-radius: 1.5rem;
         background-color: hsla(203, 15%, 48%, 0.973);
@@ -294,11 +294,11 @@ body::-webkit-scrollbar-thumb {
     }
 
     .profile{
-        width: 50%;
+        width: 70%;
         height: 50%;
         border-radius: 1.5rem;
         position: relative;
-        top: 6vh;
+        top: 10vh;
 
         margin-top: 2%;
 
@@ -333,12 +333,13 @@ body::-webkit-scrollbar-thumb {
         align-items: center;
         flex-direction: row;
         gap: 15%;
-        margin-left: 13%;
+        margin-right: 30%;
     }
     .h{
         font-size: 300%;
         transition: 0.5s;
         color: var(--textcolor);
+        margin-right: 5px;
     }
 
     .h:hover{
@@ -433,7 +434,7 @@ body::-webkit-scrollbar-thumb {
         padding: 2px 5px;
         border-radius: 3px;
         position: relative;
-        left: 5%;
+        left: 2%;
     }
 }
 
